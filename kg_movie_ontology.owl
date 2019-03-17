@@ -1,0 +1,228 @@
+@prefix : <http://www.kg_movie_ontology.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.kg_movie_ontology.com> .
+
+<http://www.kg_movie_ontology.com> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.kg_movie_ontology.com#hasActedIn
+:hasActedIn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :hasActor ;
+            rdfs:domain :Actor ;
+            rdfs:range :Movie .
+
+
+###  http://www.kg_movie_ontology.com#hasActor
+:hasActor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Movie ;
+          rdfs:range :Actor .
+
+
+###  http://www.kg_movie_ontology.com#hasGenre
+:hasGenre rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Movie ;
+          rdfs:range :Genre .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.kg_movie_ontology.com#actor_achiem
+:actor_achiem rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Actor ;
+              rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_bio
+:actor_bio rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Actor ;
+           rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_birthDay
+:actor_birthDay rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Actor ;
+                rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_birthPlace
+:actor_birthPlace rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Actor ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_brokerage
+:actor_brokerage rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Actor ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_chName
+:actor_chName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Actor ;
+              rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_constellation
+:actor_constellation rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Actor ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_foreName
+:actor_foreName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Actor ;
+                rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_nationality
+:actor_nationality rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Actor ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#actor_repWorks
+:actor_repWorks rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Actor ;
+                rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#genre_name
+:genre_name rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Genre ;
+            rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_achiem
+:movie_achiem rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Movie ;
+              rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_bio
+:movie_bio rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Movie ;
+           rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_chName
+:movie_chName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Movie ;
+              rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_director
+:movie_director rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Movie ;
+                rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_foreName
+:movie_foreName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Movie ;
+                rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_genre
+:movie_genre rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Movie ;
+             rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_language
+:movie_language rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Movie ;
+                rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_length
+:movie_length rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Movie ;
+              rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_prodCompany
+:movie_prodCompany rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Movie ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_prodTime
+:movie_prodTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Movie ;
+                rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_rekeaseTime
+:movie_rekeaseTime rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Movie ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_screenwriter
+:movie_screenwriter rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Movie ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.kg_movie_ontology.com#movie_star
+:movie_star rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Movie ;
+            rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.kg_movie_ontology.com#Actor
+:Actor rdf:type owl:Class ;
+       owl:disjointWith :Genre ,
+                        :Movie .
+
+
+###  http://www.kg_movie_ontology.com#Genre
+:Genre rdf:type owl:Class ;
+       owl:disjointWith :Movie .
+
+
+###  http://www.kg_movie_ontology.com#Movie
+:Movie rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
